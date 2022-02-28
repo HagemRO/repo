@@ -1,6 +1,10 @@
 <?php
 
+
+
 Route::redirect('/', '/login');
+
+
 Route::get('/home', function () {
     if (session('status')) {
         return redirect()->route('admin.loan-applications.index')->with('status', session('status'));
